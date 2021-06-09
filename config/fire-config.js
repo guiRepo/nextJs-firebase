@@ -1,13 +1,13 @@
 import firebase from 'firebase'
 
 const firebaseConfig = {
-    apiKey:"",
-    authDomain:"",
+    apiKey:"AIzaSyDR65aJBVkQzyOEYPXSit9NAFZTfipeP4M",
+    authDomain:"blogapp-804b3.firebaseapp.com",
     databaseURL:"",
-    projectId:"",
-    storageBucket:"",
-    messagingSenderId:"",
-    appId:""
+    projectId:"blogapp-804b3",
+    storageBucket:"blogapp-804b3.appspot.com",
+    messagingSenderId:"477837141048",
+    appId:"1:477837141048:web:efb61fcddfc0fd9dd7b2cd"
 };
 
 try {

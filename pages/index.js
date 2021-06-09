@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import CreatePost from '../components/CreatePost'
+
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
        <title>Blog App</title>
      </Head>
      <h1>Blog</h1>
+     <CreatePost />
    </div>
   )
 }
