@@ -1,11 +1,20 @@
 import React, {useState} from 'react'
+import fire from '../config/fire-config'
 
 const CreatePost = () =>{
     const[title, setTitle] = useState('')
     const[ content, setContent] = useState('')
+    const[ notification, setNotification] = useState('')
 
     const handleSubmit = e => {
         e.preventDefault()
+
+        fire.firestore()
+        .collection('blog')
+        .add({
+            "title": title,
+            "content": content
+        })
 
         console.log({
             "title": title,
@@ -14,10 +23,17 @@ const CreatePost = () =>{
 
         setTitle('')
         setContent('')
+
+        setNotification('Blogspot created')
+
+        setTimeout(()=> {setNotification('')}, 2000)
     }
     return(
         <div>
             <h2>Add Blog</h2>
+            
+            {notification}
+
             <form onSubmit={handleSubmit}>
                 <div>
                     Title<br />
